@@ -1,0 +1,110 @@
+/*background and moving boxes on the background */
+
+body {
+    
+    background: rgb(14,118,69);
+    background: linear-gradient(90deg, rgba(14,118,69,1) 0%, rgba(197,157,49,1) 68%, rgba(0,212,255,1) 100%); 
+	background-size: 400% 400%;
+	animation: gradient 150s ease infinite;
+	height: 100vh;
+
+    overflow: hidden;
+}
+
+@keyframes gradient {
+    0% {
+        background-position-x: 0%;
+        background-position-y: 0%;
+    }
+    50% {
+        background-position-x: 100%;
+        background-position-y: 100%;
+    }
+    100% {
+        background-position-x: 0%;
+        background-position-y: 0%;
+    }
+}
+
+.movingBox {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+
+
+/* Main Heading and Sub Heading */
+.highlight {
+    color: white;
+    font-size: 4vh;
+    line-height: 1;
+    font-family: 'roboto', sans-serif;
+    font-weight: bold;
+}
+
+.mainHeading {
+    position: absolute;
+
+    top: 5%;
+    left: 50%;
+    
+    height: 30vh;
+    text-align: center;
+    transform: translate(-50%);
+    font-size: 5vh;
+    color: white;
+    
+    line-height: 0.6; 
+
+    overflow: hidden;
+
+    font-family: 'roboto', sans-serif;
+}
+.mainHeadingCoverBox {
+    position: absolute;
+    top: 22.5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 55%;
+    height: 30%;
+    opacity: 0.4;
+    border-radius: 10px;
+
+    background-color: black;
+}
+
+.subHeading {
+    position: absolute;
+
+    top: 38.5%;
+    left: 50%;
+
+    height: 35vh;
+    text-align: center;
+    transform: translate(-50%);
+    font-size: 4vh;
+    color: white;
+
+    line-height: 1; 
+    font-family: 'roboto', sans-serif;
+    opacity: 1;
+    overflow: hidden;
+}
+
+
+.subHeadingCoverBox {
+    display: inline-block;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 55%;
+    height: 35vh;
+    opacity: 0.4;
+    border-radius: 10px;    
+
+    background-color: black;
+}
